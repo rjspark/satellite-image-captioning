@@ -1,24 +1,15 @@
----
-title: AI-Powered Satellite Image Captioning
-emoji: 🛰️
-colorFrom: blue
-colorTo: purple
-sdk: docker
-app_port: 7860
----
-
-# 🛰️ AI-Powered Satellite Image Captioning Platform
+# 🛰️ AI-Powered Satellite Image Captioning
 
 <div align="center">
 
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-![Deep Learning](https://img.shields.io/badge/Deep_Learning-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Hugging_Face-yellow)](https://rjspark-satellite-image-captioning.hf.space)
+[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.1.0-red.svg)](https://pytorch.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-**Advanced deep learning framework for automated natural language description generation from satellite imagery**
+**Advanced Deep Learning System for Automated Natural Language Description Generation from Satellite Imagery**
 
-[Try Demo](#) • [Documentation](#features) • [Technical Details](#technical-architecture)
+[Live Demo](https://rjspark-satellite-image-captioning.hf.space) • [Report Bug](https://github.com/rjspark/satellite-image-captioning/issues) • [Request Feature](https://github.com/rjspark/satellite-image-captioning/issues)
 
 </div>
 
@@ -26,191 +17,136 @@ app_port: 7860
 
 ## 📋 Overview
 
-This project implements a sophisticated deep learning framework for automated caption generation of satellite imagery. By integrating **Convolutional Neural Networks (CNNs)** for visual feature extraction and **Long Short-Term Memory (LSTM)** networks for sequence generation, the system interprets complex remote sensing data to produce context-aware natural language descriptions.
+This project implements a production-ready deep learning framework for automated caption generation from satellite imagery. By integrating **Convolutional Neural Networks (CNNs)** for visual feature extraction and **Long Short-Term Memory (LSTM)** networks for sequence generation, the system interprets complex remote sensing data to produce context-aware natural language descriptions.
 
-The platform enables efficient large-scale image analysis and supports critical applications in environmental monitoring, urban planning, disaster response, and agricultural management.
+### ✨ Key Highlights
 
----
-
-## ✨ Key Features
-
-### 🧠 **Deep Learning Architecture**
-- **ResNet50 Encoder**: Pre-trained CNN for extracting high-level visual features from satellite imagery
-- **LSTM Decoder**: Sequence-to-sequence model for generating natural language descriptions
-- **Context-Aware Processing**: Understands spatial relationships and semantic content in satellite scenes
-
-### 🚀 **Real-Time Processing**
-- Optimized inference pipeline for rapid caption generation
-- Supports real-time analysis for operational applications
-- Efficient batch processing capabilities
-
-### 🌍 **Wide Application Range**
-- **Urban Planning**: Infrastructure mapping and city development monitoring
-- **Environmental Monitoring**: Deforestation tracking, land use analysis, ecosystem health
-- **Disaster Response**: Rapid damage assessment and infrastructure evaluation
-- **Agriculture**: Crop classification, yield prediction, precision farming
-
-### 💻 **User-Friendly Interface**
-- Intuitive web-based platform
-- Drag-and-drop image upload
-- Real-time caption generation
-- Responsive design for all devices
+- 🧠 **ResNet50 + LSTM Architecture** - State-of-the-art encoder-decoder model
+- 🚀 **Real-time Processing** - Fast inference for operational applications
+- 🎨 **Professional UI** - Modern, responsive web interface
+- 🌍 **Real-world Applications** - Urban planning, environmental monitoring, disaster response
+- 🐳 **Docker Deployed** - Production-ready containerized application
 
 ---
 
-## 🏗️ Technical Architecture
+## 🎯 Demo
 
-### Model Components
+**Try it live:** [https://rjspark-satellite-image-captioning.hf.space](https://rjspark-satellite-image-captioning.hf.space)
+
+### Sample Results
+
+Upload a satellite image → Get AI-generated description in seconds!
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                    Input Satellite Image                 │
-│                        (224 × 224)                       │
-└─────────────────────────────────────────────────────────┘
-                            │
-                            ▼
-┌─────────────────────────────────────────────────────────┐
-│                   CNN Encoder (ResNet50)                 │
-│                                                          │
-│  • Pre-trained on ImageNet                              │
-│  • Extracts 2048-dimensional feature vectors            │
-│  • Captures spatial patterns and semantic info          │
-└─────────────────────────────────────────────────────────┘
-                            │
-                            ▼
-                   [Feature Vector]
-                   (Embedding: 256)
-                            │
-                            ▼
-┌─────────────────────────────────────────────────────────┐
-│                   LSTM Decoder Network                   │
-│                                                          │
-│  • Hidden Size: 512 units                               │
-│  • Vocabulary-based word generation                     │
-│  • Sequential caption construction                      │
-└─────────────────────────────────────────────────────────┘
-                            │
-                            ▼
-┌─────────────────────────────────────────────────────────┐
-│              Natural Language Description                │
-│         "Urban area with dense buildings and            │
-│          infrastructure network visible"                │
-└─────────────────────────────────────────────────────────┘
+Input: Satellite image of urban area
+Output: "Dense urban region with residential buildings and road networks visible"
 ```
-
-### Technology Stack
-
-| Component | Technology |
-|-----------|------------|
-| **Deep Learning Framework** | PyTorch 2.1.0 |
-| **Computer Vision** | torchvision, PIL |
-| **Web Framework** | Flask 3.0.0 |
-| **Frontend** | HTML5, CSS3, JavaScript |
-| **Deployment** | Docker, Hugging Face Spaces |
-| **Model Architecture** | ResNet50 + LSTM |
 
 ---
 
-## 🎯 Applications
+## 🏗️ Architecture
 
-### 1. **Urban Planning & Development**
-- Automated analysis of urban growth patterns
-- Infrastructure mapping and monitoring
-- Smart city development support
-- Transportation network analysis
+### Model Pipeline
 
-### 2. **Environmental Monitoring**
-- Deforestation and reforestation tracking
+```
+Satellite Image (224×224)
+        ↓
+   CNN Encoder (ResNet50)
+        ↓
+   Feature Vector (256-dim)
+        ↓
+   LSTM Decoder (512 units)
+        ↓
+   Natural Language Caption
+```
+
+### Technical Specifications
+
+| Component | Technology | Details |
+|-----------|------------|---------|
+| **Encoder** | ResNet50 | Pre-trained CNN for feature extraction |
+| **Decoder** | LSTM | 512 hidden units, 1 layer |
+| **Embedding** | 256 dimensions | Word embeddings |
+| **Vocabulary** | ~1,100 words | Domain-specific vocabulary |
+| **Framework** | PyTorch 2.1.0 | Deep learning framework |
+| **Backend** | Flask 3.0.0 | Web application server |
+| **Frontend** | HTML/CSS/JS | Responsive modern UI |
+| **Deployment** | Docker | Containerized on Hugging Face Spaces |
+
+---
+
+## 🚀 Features
+
+### 🤖 AI Capabilities
+- **Visual Feature Extraction**: Deep CNN captures spatial patterns and semantic information
+- **Natural Language Generation**: LSTM generates coherent, context-aware descriptions
+- **Transfer Learning**: Leverages pre-trained ResNet50 for robust feature extraction
+- **Sequence Modeling**: Captures long-term dependencies in caption generation
+
+### 💻 Web Application
+- **Drag-and-drop Upload**: Intuitive image upload interface
+- **Real-time Processing**: Fast caption generation (2-3 seconds)
+- **Professional Design**: Dark-themed, modern UI with animations
+- **Responsive Layout**: Works perfectly on desktop and mobile
+- **Error Handling**: Graceful error messages and validation
+
+### 🌍 Real-World Applications
+
+#### 🏙️ Urban Planning
+- Infrastructure mapping and analysis
+- City development monitoring
+- Transportation network assessment
+
+#### 🌿 Environmental Monitoring
+- Deforestation tracking
 - Land use change detection
 - Ecosystem health assessment
-- Biodiversity conservation support
 
-### 3. **Disaster Management**
+#### ⚠️ Disaster Response
 - Post-disaster damage assessment
 - Infrastructure integrity evaluation
-- Emergency response planning
-- Recovery operation support
+- Emergency response support
 
-### 4. **Agriculture & Forestry**
-- Crop type classification
-- Yield prediction and monitoring
-- Forest management and logging detection
-- Precision agriculture applications
+#### 🌾 Agriculture & Forestry
+- Crop classification
+- Yield prediction
+- Forest management
 
 ---
 
-## 🚀 How It Works
+## 🛠️ Technology Stack
 
-### Step-by-Step Process
+### Core Technologies
+- **Python 3.9+** - Programming language
+- **PyTorch 2.1.0** - Deep learning framework
+- **torchvision 0.16.0** - Computer vision utilities
+- **Flask 3.0.0** - Web framework
+- **NumPy 1.26.4** - Numerical computing
 
-1. **Image Upload**: User uploads a satellite image through the web interface
-2. **Preprocessing**: Image is resized to 224×224 and normalized
-3. **Feature Extraction**: ResNet50 CNN extracts visual features
-4. **Caption Generation**: LSTM decoder generates word sequence
-5. **Post-processing**: Special tokens removed, caption formatted
-6. **Display**: Natural language description shown to user
+### Development Tools
+- **Git** - Version control
+- **Docker** - Containerization
+- **Git LFS** - Large file storage
 
-### Technical Workflow
-
-```python
-# 1. Image Preprocessing
-image → resize(224, 224) → normalize() → tensor
-
-# 2. Feature Extraction (Encoder)
-visual_features = ResNet50(image_tensor)
-
-# 3. Caption Generation (Decoder)
-caption_ids = LSTM_Decoder.sample(visual_features)
-
-# 4. Vocabulary Mapping
-words = [vocab.itos[id] for id in caption_ids]
-
-# 5. Output Generation
-caption = " ".join(words)
-```
+### Deployment
+- **Hugging Face Spaces** - Cloud hosting
+- **Docker Container** - Production environment
 
 ---
 
-## 📊 Model Performance
-
-### Architecture Specifications
-
-| Parameter | Value |
-|-----------|-------|
-| **Encoder** | ResNet50 (Pre-trained) |
-| **Embedding Dimension** | 256 |
-| **LSTM Hidden Units** | 512 |
-| **LSTM Layers** | 1 |
-| **Vocabulary Size** | Custom (trained on dataset) |
-| **Max Sequence Length** | 20 words |
-| **Input Image Size** | 224 × 224 pixels |
-
-### Processing Capabilities
-
-- **Inference Speed**: ~2-3 seconds per image (CPU)
-- **Supported Formats**: JPG, PNG, JPEG
-- **Max File Size**: 16MB
-- **Batch Processing**: Supported
-- **Device Support**: CPU and CUDA-enabled GPUs
-
----
-
-## 🛠️ Installation & Setup
+## 📦 Installation
 
 ### Prerequisites
+- Python 3.9 or higher
+- pip package manager
+- Git (for cloning)
 
-```bash
-Python 3.9+
-PyTorch 2.1.0
-Flask 3.0.0
-```
-
-### Local Deployment
+### Local Setup
 
 1. **Clone the repository**
 ```bash
-git clone <repository-url>
-cd satellite-caption-app
+git clone https://github.com/rjspark/satellite-image-captioning.git
+cd satellite-image-captioning
 ```
 
 2. **Install dependencies**
@@ -218,192 +154,221 @@ cd satellite-caption-app
 pip install -r requirements.txt
 ```
 
-3. **Place model files**
-```
-- encoder.pth (trained encoder weights)
-- decoder.pth (trained decoder weights)
-- vocab.pkl (vocabulary object)
-```
-
-4. **Run the application**
+3. **Run the application**
 ```bash
 python app.py
 ```
 
-5. **Access the platform**
+4. **Open in browser**
 ```
-Open browser: http://localhost:7860
-```
-
-### Docker Deployment
-
-```bash
-docker build -t satcaption-ai .
-docker run -p 7860:7860 satcaption-ai
+http://localhost:7860
 ```
 
 ---
 
-## 📖 Usage Guide
+## 🎮 Usage
 
 ### Web Interface
 
-1. Navigate to the application URL
+1. Navigate to the [live demo](https://rjspark-satellite-image-captioning.hf.space)
 2. Click the upload area or drag and drop a satellite image
-3. Wait for preview to load
+3. Wait for the image preview to load
 4. Click "Generate Caption with AI"
-5. View the generated natural language description
+5. View the AI-generated description
 
-### API Endpoint
+### Supported Image Formats
+- JPG / JPEG
+- PNG
+- Max file size: 16MB
+- Recommended: 224×224 pixels or larger
 
-```python
-POST /predict
-Content-Type: multipart/form-data
-
-# Request
-{
-  "file": <satellite_image_file>
-}
-
-# Response
-{
-  "caption": "Generated description of satellite image",
-  "success": true
-}
-```
-
-### Health Check
+### API Usage (Local)
 
 ```python
-GET /health
+from PIL import Image
+from app import generate_caption
 
-# Response
-{
-  "status": "healthy",
-  "model": "ResNet50-LSTM",
-  "device": "cuda",
-  "vocab_size": 5000
-}
+# Load image
+image_path = "path/to/satellite/image.jpg"
+
+# Generate caption
+caption = generate_caption(image_path)
+print(f"Caption: {caption}")
 ```
 
 ---
 
-## 🔬 Research & Development
+## 🧪 Model Training
 
-### Deep Learning Methodology
+### Dataset
+The model was trained on a custom dataset of satellite images with corresponding captions.
 
-**Encoder Architecture:**
-- Pre-trained ResNet50 provides transfer learning benefits
-- Removes final classification layer for feature extraction
-- Adds linear projection to embedding space
-- Batch normalization for stable training
+### Training Details
+- **Optimizer**: Adam
+- **Loss Function**: Cross-Entropy Loss
+- **Batch Size**: 32
+- **Epochs**: Multiple iterations until convergence
+- **Hardware**: GPU-accelerated training
 
-**Decoder Architecture:**
-- LSTM cells maintain long-term dependencies
-- Attention mechanism potential for future enhancement
-- Beam search capability for improved caption quality
-- Temperature-based sampling for diversity control
+### Model Files
+- `encoder.pth` - Trained ResNet50 encoder weights (96 MB)
+- `decoder.pth` - Trained LSTM decoder weights (10 MB)
+- `vocab.pkl` - Vocabulary object (~1,100 words)
 
-### Training Process
+---
 
-```python
-# Encoder: Feature extraction
-features = CNN_Encoder(images)
+## 📊 Project Structure
 
-# Decoder: Caption generation
-outputs = LSTM_Decoder(features, captions)
-
-# Loss calculation
-loss = CrossEntropyLoss(outputs, targets)
-
-# Optimization
-optimizer.step()
+```
+satellite-image-captioning/
+│
+├── app.py                  # Flask application (main)
+├── model.py                # Encoder-Decoder architecture
+├── vocabulary.py           # Vocabulary class definition
+├── requirements.txt        # Python dependencies
+├── Dockerfile              # Docker configuration
+├── README.md               # Project documentation
+├── .gitignore              # Git ignore rules
+│
+├── encoder.pth             # Trained encoder weights
+├── decoder.pth             # Trained decoder weights
+├── vocab.pkl               # Vocabulary object
+│
+├── templates/
+│   └── index.html          # Web interface (frontend)
+│
+└── uploads/                # Temporary upload directory
 ```
 
 ---
 
-## 📈 Future Enhancements
+## 🔬 Technical Details
 
-### Planned Features
+### Encoder (ResNet50)
+- Pre-trained on ImageNet
+- Final FC layer removed for feature extraction
+- Outputs 2048-dimensional feature vectors
+- Batch normalization for stable features
 
-- [ ] **Attention Mechanism**: Improve focus on relevant image regions
-- [ ] **Beam Search**: Generate multiple caption candidates
-- [ ] **Multi-Language Support**: Captions in multiple languages
-- [ ] **Confidence Scores**: Probability metrics for generated captions
-- [ ] **Batch Processing**: Upload and process multiple images
-- [ ] **Fine-tuning Interface**: Allow users to train on custom datasets
-- [ ] **API Integration**: RESTful API for third-party applications
-- [ ] **Mobile Application**: Native iOS and Android apps
+### Decoder (LSTM)
+- 512 hidden units
+- Single layer architecture
+- Embedding dimension: 256
+- Max sequence length: 20 words
+- Greedy decoding for inference
 
-### Model Improvements
+### Image Preprocessing
+```python
+transforms.Compose([
+    transforms.Resize((224, 224)),
+    transforms.ToTensor(),
+    transforms.Normalize(
+        mean=[0.485, 0.456, 0.406],
+        std=[0.229, 0.224, 0.225]
+    )
+])
+```
 
-- Transformer-based architecture (Vision Transformer + GPT)
-- Larger vocabulary for more diverse descriptions
-- Domain-specific fine-tuning (urban, agricultural, coastal)
-- Multi-modal learning with additional data sources
+---
+
+## 🚀 Deployment
+
+### Hugging Face Spaces
+
+The application is deployed on Hugging Face Spaces using Docker:
+
+1. **Build Docker Image**: Automated on push to main branch
+2. **Install Dependencies**: Requirements installed in container
+3. **Load Models**: Model weights loaded at startup
+4. **Run Application**: Flask server starts on port 7860
+
+### Docker Configuration
+
+```dockerfile
+FROM python:3.9-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+EXPOSE 7860
+CMD ["python", "app.py"]
+```
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Areas of interest:
+Contributions are welcome! Here's how you can help:
 
-- Model architecture improvements
-- Dataset expansion
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+### Areas for Contribution
+- Model improvements (attention mechanism, transformer architecture)
 - UI/UX enhancements
+- Additional features (batch processing, multi-language support)
 - Documentation improvements
-- Bug fixes and optimization
+- Bug fixes
 
 ---
 
-## 📄 License
+## 📈 Future Enhancements
 
-This project is developed for educational and research purposes.
+- [ ] **Attention Mechanism** - Improve caption quality with visual attention
+- [ ] **Beam Search** - Generate multiple caption candidates
+- [ ] **Transformer Architecture** - Upgrade to Vision Transformer + GPT
+- [ ] **Multi-language Support** - Captions in multiple languages
+- [ ] **Batch Processing** - Process multiple images simultaneously
+- [ ] **Confidence Scores** - Display model confidence for predictions
+- [ ] **REST API** - Programmatic access for developers
+- [ ] **Mobile App** - Native iOS and Android applications
+- [ ] **Fine-tuning Interface** - Allow users to fine-tune on custom datasets
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👤 Author
+
+**RJ Spark**
+
+- GitHub: [@rjspark](https://github.com/rjspark)
+- Hugging Face: [@rjspark](https://huggingface.co/rjspark)
+- LinkedIn: [Add your LinkedIn]
+- Email: [Add your email]
 
 ---
 
 ## 🙏 Acknowledgments
 
-- **PyTorch Team**: Deep learning framework
-- **ResNet Architecture**: Original paper by He et al.
-- **LSTM Networks**: Hochreiter & Schmidhuber
-- **Satellite Imagery**: Remote sensing data providers
+- **PyTorch Team** - Deep learning framework
+- **ResNet Architecture** - He et al. (2015)
+- **LSTM Networks** - Hochreiter & Schmidhuber (1997)
+- **Hugging Face** - Deployment platform
+- **Remote Sensing Community** - Dataset and domain knowledge
+
+
+## 📞 Support
+
+If you encounter any issues or have questions:
+
+- 🐛 [Open an Issue](https://github.com/rjspark/satellite-image-captioning/issues)
+- 💬 [Start a Discussion](https://github.com/rjspark/satellite-image-captioning/discussions)
+- 📧 Email: rjshreeya@gmail.com
 
 ---
 
-## 📧 Contact & Support
 
-For questions, issues, or collaboration opportunities:
-
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/satellite-caption/issues)
-- 📧 **Email**: your.email@example.com
-- 💼 **LinkedIn**: [Your Profile](https://linkedin.com/in/yourprofile)
-- 🌐 **Portfolio**: [Your Website](https://yourwebsite.com)
-
----
-
-## 📊 Project Statistics
-
-```
-📦 Lines of Code: ~1,500
-🧠 Model Parameters: ~25M (ResNet50) + 2M (LSTM)
-💾 Model Size: ~100MB
-⚡ Inference Time: 2-3 seconds (CPU)
-🎯 Application Domain: Remote Sensing & Computer Vision
-```
-
----
-
-## 🌟 Star History
-
-If you find this project useful, please consider giving it a star! ⭐
-
----
-
-<div align="center">
 
 **Built with ❤️ using PyTorch and Deep Learning**
 
-🛰️ **Enabling intelligent interpretation of our planet from space** 🌍
+[⬆ Back to Top](#-ai-powered-satellite-image-captioning)
 
 </div>
