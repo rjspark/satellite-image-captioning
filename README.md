@@ -43,6 +43,13 @@ Output: "Dense urban region with residential buildings and road networks visible
 ```
 
 ---
+<img width="931" height="422" alt="Image" src="https://github.com/user-attachments/assets/f8424c1e-e6f6-42c7-818d-9f6abc717dce" />
+
+<img width="829" height="437" alt="Image" src="https://github.com/user-attachments/assets/f07e6acd-6f13-4479-8b5b-d54d6763875f" />
+
+<img width="878" height="439" alt="Image" src="https://github.com/user-attachments/assets/c2f9c5ed-26c2-4344-94d5-af9142a691be" />
+
+<img width="832" height="438" alt="Image" src="https://github.com/user-attachments/assets/7fbe9f88-5d05-4c13-94b5-48714bb25a99" />
 
 ## 🏗️ Architecture
 
